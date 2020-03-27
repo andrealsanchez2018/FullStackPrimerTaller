@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios | Clase3</title>
+</head>
+<body>
+   <script>
+       /* 
+EJERCICIO
+            1) Pedir al usuario x cantidad de datos numéricos. Se deben discriminar los ceros
+                que el usuario ingrese e imprimir únicamente en el html o en consola los datos
+                distintos a cero.
+
+                ej:
+                5
+                deben salir 5 prompt
+                0
+                5
+                10
+                10
+                3
+                5, 10, 10, 3
+
+
+*/
+
+//DESARROLLO
+/* let datos = [];
+let sin0= [];
+
+let dato1 = Number(prompt("Ingrese dato1 numerico"));
+
+let dato2 = Number(prompt("Ingrese dato2 numerico"));
+
+let dato3 = Number(prompt("Ingrese dato3 numerico"));
+
+let dato4 = Number(prompt("Ingrese dato4 numerico"));
+
+let dato5 = Number(prompt("Ingrese dato5 numerico"));
+
+
+
+datos.push(dato1,dato2, dato3, dato4, dato5);
+
+for(var i=0; i<datos.length; i++){
+
+if(isNaN(datos[i])){
+    alert("Digite un numero")
+} else{
+    
+    var separa = datos[i]
+    separa.split(0);
+    sin0.push(datos[i]);
+}
+console.log(sin0);
+} */
+
+
+//prueba 4
+let datos= [];
+let sin0=[];
+
+let one,two,three,four,five;
+
+let dato1 = prompt("Ingrese dato1 numerico");
+
+let dato2 = prompt("Ingrese dato2 numerico");
+
+let dato3 = prompt("Ingrese dato3 numerico");
+
+let dato4 = prompt("Ingrese dato4 numerico");
+
+let dato5 = prompt("Ingrese dato5 numerico");
+
+
+
+datos.push(dato1, dato2, dato3, dato4, dato5);
+
+for(var i=0; i<datos.length; i++){
+
+sin0.push(datos[i].split(0))
+
+}
+
+document.write("<h1>Ejercicio 1 | Clase 3</h1>");
+document.write(sin0)
+
+
+
+
+/* 
+ejercicio 2
+
+ 2) Pedir al usuario que ingrese x cantidad de datos. Estos pueden ser numéricos
+                o caracteres. Validar que al ser caracter ingrese únicamente el primer
+                caracter de dicha cadena. Organizar los datos del usuario de menor a mayor
+                empezando por las letras y luego por los números
+
+                ej:
+                Pepe
+                1
+                Kamilo
+                Carlos
+                10
+
+                P, 1, K, C, 10 
+                C, K, P, 1, 10
+
+*/
+/* //DESARROLLO
+
+let datos = [];
+let numbersDat= [];
+let strings= [];
+
+let dato1 = Number(prompt("Ingrese dato1 numerico"));
+
+let dato2 = Number(prompt("Ingrese dato2 numerico"));
+
+let dato3 = Number(prompt("Ingrese dato3 numerico"));
+
+let dato4 = prompt("Ingrese dato4 string");
+
+let dato5 = prompt("Ingrese dato5 string");
+
+
+
+datos.push(dato1,dato2, dato3, dato4, dato5);
+
+//ejemplo4 for
+for(var i=0; i<datos.length; i++){
+
+if(isNaN(datos[i])){
+    strings.push(datos[i]);
+} else{
+    numbersDat.push(datos[i]);
+}
+
+}
+
+
+
+// inverso = grupoA.reverse();
+// document.write(inverso + "<br>"); 
+
+document.write("<h1>Ejercicio 2 | Clase 3</h1>");
+document.write(`Esta es la cadena de numeros: ${numbersDat} <br>`);
+numbersDat.sort();
+document.write(`Esta es la cadena de Strings: ${strings} <br>`);
+strings.sort();
+// all.reverse();
+let all = strings.concat(numbersDat);
+document.write(`Esta es la cadena unida: ${all} <br>`);
+
+ */
+   </script> 
+</body>
+</html>

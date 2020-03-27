@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 3</title>
+</head>
+<body>
+    
+
+  <script>
+
+/* 
+        ---------------- Métodos o funciones para Cadenas ---------------------
+        Objeto String
+        split - Romper una cadena a partir de una determinado caracter
+        length - La longitud de la cadena
+        slice
+        toLowerCase - convertir la cadena a minúscula
+        toUpperCase - convertir la cadena a mayuscula
+        concat
+        charAt - Traer caracter especificado
+        trim - Quitar espacios en blanco en los extremos
+        repeat
+        str
+        substr - Extraer una subcadena desde un punto hasta determinada cantidad de caracteres
+        lastIndexOf - última posición de un caracter en especifico
+        indexOf - primer posición de un caracter en especifico
+        replace
+        */
+
+
+   
+ /* let cadena = prompt("Ingresa una frase");
+        // Hola cómo estas
+        // 0123456789
+        document.write(`Longitud de la cadena ${cadena.length} <br>`);
+        document.write(`Texto en Mayúsculas ${cadena.toUpperCase()} <br>`);
+        document.write(`Texto en Minúsculas ${cadena.toLowerCase()} <br>`);
+        document.write(`Caracter en primer posición (1) ${cadena.charAt(1)} <br>`); // Cadena de String es un arreglo
+
+        let caracter = prompt("Escriba un caracter a buscar");
+        document.write(`<hr> <br> Posición de letra: ${cadena.indexOf(caracter)} <br>`);
+        document.write(`Posición de la última letra: ${cadena.lastIndexOf(caracter)} <br>`);
+        document.write(cadena.split("a")); // Siempre nos devuelve un arreglo 
+        document.write(`<br> REEMPLAZAR UN STRING POR cadena: ${cadena.replace("a","b")}<br>`);
+     document.write(`<br> extraer cadena: ${cadena.substr(2,4)}<br>`); //posicion inicial 2 y cantidad de caracteres a traer a partir de esa posicion
+     */
+
+
+/* 
+        ---------------- Métodos o funciones para Arreglos ---------------------
+        join - Concatenar a partir de un símbolo o un caracter
+        concat - Concatenar o unir dos o más arreglos
+        push - Agregar datos a un arreglo Siempre los anexa en la última posición
+        splice - Añade elementos a un arreglo a partir de un punto a un punto B
+        slice - Devuelve una porción del arreglo
+        shift - Eliminar el dato que se encuentre en la posición 0
+        sort - Ordenar un arreglo de mayor a menor
+        unshift - Agregar datos en la posición 0
+        map (ES6) **
+        reverse - Invertir el arreglo
+        pop - Eliminarmos el dato de la última posición del arreglo
+        find
+        */
+
+ /* //otro
+let alfa1 = ["A", "B", "C"];
+let alfa2 = ["D", "E", "F"];
+let grupoA,
+    grupoB,
+    inverso;
+
+grupoA = alfa1.concat(alfa2);
+document.write(grupoA + "<br>"); // console.log()
+
+grupoB = grupoA.join("-");
+document.write(grupoB + "<br>"); // console.log()
+
+grupoA.pop();
+document.write(grupoA + "<br>"); // console.log()
+
+grupoA.push("G");
+document.write(grupoA + "<br>"); // console.log()
+
+grupoA.shift();
+document.write(grupoA + "<br>"); // console.log()
+
+grupoA.unshift("Z");
+document.write(grupoA + "<br>"); // console.log()
+
+inverso = grupoA.reverse();
+document.write(inverso + "<br>"); // console.log()
+
+grupoA.splice(1,3, "ene");  //en la posicion 1 el espacio de los 3 string siguientes remplacelos por ene
+document.write(grupoA + "<br>"); // console.log()  */
+ 
+/* 
+EJERCICIO
+            1) Pedir al usuario x cantidad de datos numéricos. Se deben discriminar los ceros
+                que el usuario ingrese e imprimir únicamente en el html o en consola los datos
+                distintos a cero.
+
+                ej:
+                5
+                deben salir 5 prompt
+                0
+                5
+                10
+                10
+                3
+                5, 10, 10, 3
+
+
+*/
+
+//DESARROLLO
+
+/* let datos = [];
+let sin0= [];
+
+let dato1 = Number(prompt("Ingrese dato1 numerico"));
+
+let dato2 = Number(prompt("Ingrese dato2 numerico"));
+
+let dato3 = Number(prompt("Ingrese dato3 numerico"));
+
+let dato4 = Number(prompt("Ingrese dato4 numerico"));
+
+let dato5 = Number(prompt("Ingrese dato5 numerico"));
+
+
+
+datos.push(dato1,dato2, dato3, dato4, dato5);
+
+for(var i=0; i<datos.length; i++){
+
+if(isNaN(datos[i])){
+    alert("Digite un numero")
+} else{
+    
+    var separa = datos[i]
+    separa.split(0);
+    sin0.push(datos[i]);
+}
+console.log(sin0);
+} */
+
+/* 
+let datos = [];
+let one,two,three,four,five;
+
+let dato1 = prompt("Ingrese dato1 numerico");
+
+let dato2 = prompt("Ingrese dato2 numerico");
+
+let dato3 = prompt("Ingrese dato3 numerico");
+
+let dato4 = prompt("Ingrese dato4 numerico");
+
+let dato5 = prompt("Ingrese dato5 numerico");
+
+one =dato1.split(0);
+two =dato2.split(0);
+three =dato3.split(0);
+four =dato4.split(0);
+five =dato5.split(0);
+
+datos.push(one, two, three, four, five);
+
+document.write("<h1>Ejercicio 1 | Clase 3</h1>");
+document.write(datos) */
+
+//prueba 2
+let datos= [];
+let sin0=[];
+
+let one,two,three,four,five;
+
+let dato1 = prompt("Ingrese dato1 numerico");
+
+let dato2 = prompt("Ingrese dato2 numerico");
+
+let dato3 = prompt("Ingrese dato3 numerico");
+
+let dato4 = prompt("Ingrese dato4 numerico");
+
+let dato5 = prompt("Ingrese dato5 numerico");
+
+
+
+datos.push(dato1, dato2, dato3, dato4, dato5);
+
+for(var i=0; i<datos.length; i++){
+
+sin0.push(datos[i].split(0))
+
+}
+
+document.write("<h1>Ejercicio 1 | Clase 3</h1>");
+document.write(sin0)
+
+
+
+/* 
+ejercicio 2
+
+ 2) Pedir al usuario que ingrese x cantidad de datos. Estos pueden ser numéricos
+                o caracteres. Validar que al ser caracter ingrese únicamente el primer
+                caracter de dicha cadena. Organizar los datos del usuario de menor a mayor
+                empezando por las letras y luego por los números
+
+                ej:
+                Pepe
+                1
+                Kamilo
+                Carlos
+                10
+
+                P, 1, K, C, 10 
+                C, K, P, 1, 10
+
+*/
+/* //DESARROLLO
+
+let datos = [];
+let numbersDat= [];
+let strings= [];
+
+let dato1 = Number(prompt("Ingrese dato1 numerico"));
+
+let dato2 = Number(prompt("Ingrese dato2 numerico"));
+
+let dato3 = Number(prompt("Ingrese dato3 numerico"));
+
+let dato4 = prompt("Ingrese dato4 string");
+
+let dato5 = prompt("Ingrese dato5 string");
+
+
+
+datos.push(dato1,dato2, dato3, dato4, dato5);
+
+//ejemplo4 for
+for(var i=0; i<datos.length; i++){
+
+if(isNaN(datos[i])){
+    strings.push(datos[i]);
+} else{
+    numbersDat.push(datos[i]);
+}
+
+}
+
+
+
+// inverso = grupoA.reverse();
+// document.write(inverso + "<br>"); 
+
+document.write("<h1>Ejercicio 2 | Clase 3</h1>");
+document.write(`Esta es la cadena de numeros: ${numbersDat} <br>`);
+numbersDat.sort();
+document.write(`Esta es la cadena de Strings: ${strings} <br>`);
+strings.sort();
+// all.reverse();
+let all = strings.concat(numbersDat);
+document.write(`Esta es la cadena unida: ${all} <br>`);
+
+ */
+    
+  </script>  
+</body>
+</html>
