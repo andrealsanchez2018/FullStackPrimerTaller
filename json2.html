@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON :: JavaScript Object Notation</title>
+    <style>
+        input{
+            background-color: indianred;
+        }
+        #ciudad{
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        #btnc{
+           margin-top: -1;
+             display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="prueba">
+        <input type="text" id="dato">
+        <input type="text" id="edad">
+        <button id="btnC">Capturar</button>
+        <input type="text" id="ciudad">       
+        
+        <button id="btnA">Agregar</button>
+        <button id="btnM">Modificar</button>
+    </div>
+    <h1>Ejercicio localStorage</h1>
+
+    <p id="resultN"><span>Hola </span></p>
+    <p id="resultE">  Su Edad es </p>
+    <span>Su ciudad es:   <p id="resultC"></p></span>
+    <script>
+
+         //Ahora modificando datos:
+         let btnC = document.getElementById('btnC');
+         btnC.addEventListener('click' , function () {
+             datosUsuarioC ={};
+             let nombreUsuario = document.getElementById('dato').value;
+             let edadUsuario = document.getElementById('edad').value;
+             
+            
+            datosUsuarioC.nombre = nombreUsuario; // {'nombre' : nombreUsuario}
+            datosUsuarioC.edad = edadUsuario;
+            
+            console.log(datosUsuarioC);
+
+            // Crear nuestro localStorage
+            //localStorage.setItem('usuario', datosUsuario);
+            //Es mejor dejarlo asi para que se puede verla info y se pueda manipular:
+            localStorage.setItem('usuarioC', JSON.stringify(datosUsuarioC));
+
+            // Obtenerdato de localStorage
+            let datoJsonC = JSON.parse(localStorage.getItem('usuarioC'));
+            document.getElementById('resultN').innerHTML += datoJsonC.nombre;
+            document.getElementById('resultE').innerHTML += datoJsonC.edad;
+         });
+
+//Ahora agregando datos:
+
+         btnA.addEventListener('click' , function () {
+             
+             
+             let ciudadUsuario = document.getElementById('ciudad').value;
+             datosUsuarioC.ciudad = ciudadUsuario;
+
+            console.log(datosUsuarioC);
+
+            // Crear nuestro localStorage
+            //localStorage.setItem('usuario', datosUsuario);
+            //Es mejor dejarlo asi para que se puede verla info y se pueda manipular:
+            localStorage.setItem('usuarioC', JSON.stringify(datosUsuarioC));
+
+            // Obtenerdato de localStorage
+            let datoJsonA = JSON.parse(localStorage.getItem('usuarioC'));
+            document.getElementById('resultC').innerHTML = datoJsonA.ciudad;
+         });
+
+//Ahora modificando datos:
+
+btnM.addEventListener('click' , function () {
+             
+             
+             var ciudadUsuario = document.getElementById('ciudad').value;
+             datosUsuarioC.ciudad = ciudadUsuario;
+
+            console.log(datosUsuarioC);
+
+            // Crear nuestro localStorage
+            //localStorage.setItem('usuario', datosUsuario);
+            //Es mejor dejarlo asi para que se puede verla info y se pueda manipular:
+            localStorage.setItem('usuarioC', JSON.stringify(datosUsuarioC));
+
+            // Obtenerdato de localStorage
+            let datoJsonM = JSON.parse(localStorage.getItem('usuarioC'));
+            document.getElementById('resultC').innerHTML = datoJsonM.ciudad;
+         });
+    </script>
+</body>
+</html>
